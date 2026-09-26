@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký MOVIE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/register.css">
+</head>
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+  <div class="register-box rounded shadow p-4">
+    <div class="text-center mb-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/2798/2798007.png" alt="Movie Icon" width="50">
+      <h1 class="fw-bold mt-2">MOVIE</h1>
+      <p class="text-secondary">Đăng ký để xem phim</p>
+    </div>
+
+    <form id="register-form">
+      <div class="mb-3">
+        <label for="username" class="form-label">Tên đăng nhập</label>
+        <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập">
+        <small id="username-error" class="text-danger"></small>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Nhập email">
+        <small id="email-error" class="text-danger"></small>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+        <small id="password-error" class="text-danger"></small>
+      </div>
+      <button type="submit" class="btn btn-dark w-100 fw-bold">Đăng ký</button>
+    </form>
+
+    <p class="text-center mt-3 text-dark">
+      Đã có tài khoản? 
+      <a href="#" id="login-link" class="fw-bold text-danger text-decoration-none">Đăng nhập ngay</a>
+    </p>
+  </div>
+
+  <script src="./scripts/register.js"></script>
+</body>
+</html>

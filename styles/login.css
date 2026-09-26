@@ -1,0 +1,72 @@
+/* =========================
+   TRANG ĐĂNG NHẬP MOVIE
+   ========================= */
+
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-box {
+  background-color: #fff;
+  width: 420px;
+  padding: 35px 38px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Icon MOVIE */
+.login-box img {
+  transition: all 0.3s ease;
+}
+.login-box img:hover {
+  filter: brightness(1.3) drop-shadow(0 0 8px #ff3b70);
+  transform: scale(1.05);
+}
+
+.form-label {
+  color: #000;
+  font-size: 16px;
+}
+
+.form-control {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  height: 45px;
+  border-radius: 6px;
+}
+.form-control:focus {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 5px gray;
+}
+
+.btn-dark {
+  height: 45px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.btn-dark:hover {
+  background-color: #333;
+}
+
+.text-dark {
+  color: #000 !important;
+}
+.text-danger:hover {
+  text-decoration: underline;
+}
