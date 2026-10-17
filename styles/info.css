@@ -1,0 +1,25 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+#movie-detail {
+  margin-top: 50px;
+}
+
+.movie-info h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.movie-info p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.btn-danger {
+  font-weight: 600;
+  border-radius: 6px;
+}

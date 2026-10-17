@@ -66,3 +66,25 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* Tiêu đề Phim Trending */
+#trending-section h2 {
+  color: #fff; /* chữ trắng */
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* tạo bóng nhẹ để dễ đọc */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* khoảng cách giữa chữ và emoji 🔥 */
+}
+/* Tiêu đề Phim đang công chiếu */
+#carousel-section h2 {
+  color: #fff; /* chữ trắng */
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* bóng nhẹ giúp chữ nổi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* khoảng cách giữa chữ và emoji 🎬 */
+}
