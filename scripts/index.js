@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .getElementById("search-btn")
       .addEventListener("click", function () {
-        alert("Tính năng tìm kiếm đang được phát triển!");
+    window.location.href = "search.html";
       });
   } else {
     // Nếu chưa đăng nhập
@@ -39,12 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("login-btn").addEventListener("click", function () {
       window.location.href = "login.html";
     });
-
-    document
-      .getElementById("search-btn")
-      .addEventListener("click", function () {
-        alert("Tính năng tìm kiếm đang được phát triển!");
-      });
   }
 });
 // ==================== CHUYỂN TRANG CHI TIẾT PHIM ====================

@@ -1,6 +1,54 @@
 const BASE_URL = "https://api.tvmaze.com";
 const params = new URLSearchParams(window.location.search);
 const showId = params.get("id");
+//start navbar
+document.addEventListener("DOMContentLoaded", function () {
+  const navActions = document.getElementById("nav-actions");
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  navActions.innerHTML = "";
+
+  if (currentUser && currentUser.username) {
+    // Nếu đã đăng nhập
+    navActions.innerHTML = `
+      <span class="text-light me-3">Xin chào, <strong>${currentUser.username}</strong></span>
+      <button class="btn btn-outline-light me-2" id="search-btn">Tìm kiếm</button>
+      <button class="btn btn-outline-light" id="logout-btn">Đăng xuất</button>
+    `;
+
+    // Xử lý nút đăng xuất
+    document
+      .getElementById("logout-btn")
+      .addEventListener("click", function () {
+        localStorage.removeItem("currentUser");
+        alert("Bạn đã đăng xuất!");
+        window.location.href = "login.html";
+      });
+
+    // Xử lý nút tìm kiếm
+    document
+      .getElementById("search-btn")
+      .addEventListener("click", function () {
+        alert("Tính năng tìm kiếm đang được phát triển!");
+      });
+  } else {
+    // Nếu chưa đăng nhập
+    navActions.innerHTML = `
+      <button class="btn btn-outline-light me-2" id="search-btn">Tìm kiếm</button>
+      <button class="btn btn-outline-light" id="login-btn">Đăng nhập</button>
+    `;
+
+    document.getElementById("login-btn").addEventListener("click", function () {
+      window.location.href = "login.html";
+    });
+
+    document
+      .getElementById("search-btn")
+      .addEventListener("click", function () {
+        alert("Tính năng tìm kiếm đang được phát triển!");
+      });
+  }
+});
 
 async function loadMovieDetail() {
   const detailContainer = document.getElementById("movie-detail");
@@ -26,7 +74,6 @@ async function loadMovieDetail() {
           <p><strong>Thời lượng:</strong> ${show.runtime || "N/A"} phút</p>
           <p><strong>Ngày phát sóng:</strong> ${show.premiered || "N/A"}</p>
           <p><strong>Tóm tắt:</strong> ${show.summary?.replace(/<[^>]+>/g, "") || "Không có thông tin"}</p>
-          <a href="${show.officialSite || "#"}" target="_blank" class="btn btn-danger mt-3">Trang chính thức</a>
         </div>
       </div>
     `;
